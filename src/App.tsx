@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Button, { ButtonSecondary, ButtonStroke } from "@components/Button";
+import GlobalStyle from "@utils/themes";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <div style={{ margin: "1rem", display: "flex", gap: "1rem" }}>
+        <Button>Label</Button>
+        <Button disabled={true}>Label</Button>
+        <ButtonStroke>Label</ButtonStroke>
+        <ButtonStroke disabled={true}>Label</ButtonStroke>
+        <ButtonSecondary>Label</ButtonSecondary>
+        <ButtonSecondary disabled={true}>Label</ButtonSecondary>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
