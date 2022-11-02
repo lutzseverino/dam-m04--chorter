@@ -6,7 +6,7 @@ interface ButtonProps {
   size?: string;
 }
 
-const getVariantStyle = (style = "primary") =>
+const getVariantStyle = (variant = "primary") =>
   ({
     stroke: css`
       background-color: var(--light);
@@ -17,7 +17,7 @@ const getVariantStyle = (style = "primary") =>
       background-color: var(--light-shade);
       color: var(--dark);
     `,
-  }[style]);
+  }[variant]);
 
 const getSizeStyle = (size = "medium") =>
   ({
@@ -37,6 +37,7 @@ const getSizeStyle = (size = "medium") =>
 
 const Button = styled.button<ButtonProps>`
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 
   transition: filter 0.1s ease-in-out;
 
@@ -50,8 +51,6 @@ const Button = styled.button<ButtonProps>`
   color: var(--light);
   font-weight: bold;
   font-family: inherit;
-
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 
   ${({ variant }) => getVariantStyle(variant)}
   ${({ size }) => getSizeStyle(size)}
