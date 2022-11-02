@@ -1,4 +1,4 @@
-import Button, { ButtonSecondary, ButtonStroke } from "@components/Button";
+import Button from "@components/Button";
 import GlobalStyle from "@utils/themes";
 
 const App = () => {
@@ -8,10 +8,14 @@ const App = () => {
       <div style={{ margin: "1rem", display: "flex", gap: "1rem" }}>
         <Button>Label</Button>
         <Button disabled={true}>Label</Button>
-        <ButtonStroke>Label</ButtonStroke>
-        <ButtonStroke disabled={true}>Label</ButtonStroke>
-        <ButtonSecondary>Label</ButtonSecondary>
-        <ButtonSecondary disabled={true}>Label</ButtonSecondary>
+        <Button variant="stroke">Label</Button>
+        <Button variant="stroke" disabled={true}>
+          Label
+        </Button>
+        <Button variant="secondary">Label</Button>
+        <Button variant="secondary" disabled={true}>
+          Label
+        </Button>
       </div>
     </>
   );

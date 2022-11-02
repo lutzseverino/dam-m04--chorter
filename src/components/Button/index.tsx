@@ -1,8 +1,22 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface ButtonProps {
   disabled?: boolean;
+  variant?: string;
 }
+
+const variantStyles = (variant = "primary") =>
+  ({
+    stroke: css`
+      background-color: var(--light);
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    `,
+    secondary: css`
+      background-color: var(--light-shade);
+      color: var(--dark);
+    `,
+  }[variant]);
 
 const Button = styled.button<ButtonProps>`
   transition: filter 0.1s ease-in-out;
@@ -22,6 +36,8 @@ const Button = styled.button<ButtonProps>`
 
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 
+  ${({ variant }) => variantStyles(variant)}
+
   &:hover:not(:disabled) {
     filter: brightness(0.9);
   }
@@ -29,20 +45,6 @@ const Button = styled.button<ButtonProps>`
   &:active:not(:disabled) {
     filter: brightness(0.8);
   }
-`;
-
-export const ButtonStroke = styled(Button)`
-  background-color: var(--light);
-
-  border: 2px solid var(--primary);
-
-  color: var(--primary);
-`;
-
-export const ButtonSecondary = styled(Button)`
-  background-color: var(--light-shade);
-
-  color: var(--dark);
 `;
 
 export default Button;
