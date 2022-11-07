@@ -35,11 +35,9 @@ const getSizeStyle = (size = "medium") =>
     `,
   }[size]);
 
-const Button = styled.button<ButtonProps>`
+const Button = styled.a<ButtonProps>`
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
-
-  transition: filter 0.1s ease-in-out;
 
   height: fit-content;
 
@@ -55,13 +53,19 @@ const Button = styled.button<ButtonProps>`
   ${({ variant }) => getVariantStyle(variant)}
   ${({ size }) => getSizeStyle(size)}
 
-  &:hover:not(:disabled) {
-    filter: brightness(0.9);
-  }
+  ${({ disabled }) => {
+    if (!disabled) {
+      return css`
+        &:hover:not(:disabled) {
+          filter: brightness(0.95);
+        }
 
-  &:active:not(:disabled) {
-    filter: brightness(0.8);
-  }
+        &:active:not(:disabled) {
+          filter: brightness(0.9);
+        }
+      `;
+    }
+  }}
 `;
 
 export default Button;
