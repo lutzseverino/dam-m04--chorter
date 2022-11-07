@@ -39,6 +39,8 @@ const Button = styled.a<ButtonProps>`
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 
+  user-select: none;
+
   height: fit-content;
 
   border: none;
