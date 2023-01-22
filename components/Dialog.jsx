@@ -8,9 +8,8 @@ const StyledDialog = styled.div`
 
   padding: 1rem 2rem;
 
-  background-color: var(--background);
+  background-color: white;
   border-radius: 0.4rem;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 `;
 
 const StyledHeader = styled.header`
