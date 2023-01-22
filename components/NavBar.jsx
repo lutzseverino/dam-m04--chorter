@@ -3,14 +3,16 @@ import styled from "styled-components";
 
 const StyledNav = styled.nav`
   position: sticky;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+
   padding: 2rem 6rem;
   width: 100%;
-  background-color: ${(props) =>
-    props.continued ? "var(--background-tone)" : "var(--background)"};
+
+  background-color: "var(--background)";
 
   div {
     display: flex;
@@ -30,7 +32,7 @@ const NavBar = ({ continued }) => {
     <StyledNav continued={continued}>
       <a href="#/">
         <Image
-          src="/chorter-light-full.svg"
+          src="/brand/logo/light-full.svg"
           alt="Chorter Full Logo"
           width={117}
           height={24}
