@@ -1,6 +1,8 @@
 import Head from "next/head";
+
 import NavBar from "../components/NavBar";
 import Dialog from "../components/Dialog";
+import Input from "../components/forms/Input";
 
 import styled from "styled-components";
 
@@ -50,7 +52,9 @@ export default function Home() {
               Chorter is a chore management app that helps you manage your time.
             </p>
           </div>
-          <Dialog title={"Start your session"}>TODO</Dialog>
+          <Dialog title={"Start your session"}>
+            <Input type="text" placeholder="Describe your chore" />
+          </Dialog>
         </StyledAction>
       </StyledMain>
 
