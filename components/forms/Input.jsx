@@ -6,18 +6,23 @@ const Input = styled.input`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0.4rem;
+  padding: 0.2rem 0.4rem;
 
-  background-color: white;
+  background-color: var(--background);
   border-radius: 0.4rem;
-  border: 2px solid #cccccc;
+  border: 1px solid var(--background-tone);
 
   font: inherit;
   color: inherit;
 
   &:focus {
-    outline: none;
-    border: 2px solid #999999;
+    outline: 2px solid var(--primary);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--background-tone);
+    border: 1px solid var(--background-secondary-tone);
   }
 `;
 

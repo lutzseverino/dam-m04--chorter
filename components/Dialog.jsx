@@ -4,12 +4,14 @@ const StyledDialog = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 
   padding: 1rem 2rem;
 
   background-color: white;
   border-radius: 0.4rem;
+  border: 1px solid #cccccc;
+
+  max-width: 100%;
 `;
 
 const StyledHeader = styled.header`
