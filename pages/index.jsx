@@ -5,6 +5,7 @@ import Dialog from "../components/Dialog";
 import Input from "../components/forms/Input";
 
 import styled from "styled-components";
+import SessionFlow from "../components/forms/SessionFlow";
 
 const StyledMain = styled.main`
   display: flex;
@@ -53,7 +54,7 @@ export default function Home() {
             </p>
           </div>
           <Dialog title={"Start your session"}>
-            <Input type="text" placeholder="Describe your chore" />
+            <SessionFlow />
           </Dialog>
         </StyledAction>
       </StyledMain>
