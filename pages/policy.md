@@ -1,4 +1,4 @@
-# Política de privacidad de Chorter
+# Política de Privacidad de Chorter
 
 Chorter, Inc. (en adelante, "Chorter", "nosotros" o "nuestro") respeta su privacidad y ha creado esta Política de privacidad (en adelante, "Política") para explicar cómo recopilamos, usamos y protegemos la información que recolectamos a través de nuestro sitio web, www.chorter.com (en adelante, "Sitio web") y nuestros servicios de gestión de tiempo y tareas (en adelante, los "Servicios").
 

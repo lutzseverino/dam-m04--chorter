@@ -1,11 +1,8 @@
 import Head from "next/head";
 
-import NavBar from "../components/NavBar";
-import Dialog from "../components/Dialog";
-import Input from "../components/forms/Input";
 import SessionFlow from "../components/forms/SessionFlow";
 
-import { Paragraph } from "../components/Headings";
+import { Heading1, Paragraph } from "../components/Headings";
 
 import styled from "styled-components";
 
@@ -24,7 +21,7 @@ const StyledAction = styled.div`
   align-items: center;
 
   width: 100%;
-  height: 32rem;
+  min-height: 32rem;
   padding: 2rem 6rem;
 
   background-image: url("/brand/cta-bkg.svg");
@@ -48,9 +45,10 @@ export default function Home() {
       <StyledMain>
         <StyledAction>
           <div>
-            <h1>Chores made shorter</h1>
+            <Heading1>Chores made Shorter</Heading1>
             <Paragraph>
-              Chorter is a chore management app that helps you manage your time.
+              Get started rigth now at completely no cost. Chorter is a free
+              task management app that helps you get things done.
             </Paragraph>
           </div>
           <SessionFlow />
