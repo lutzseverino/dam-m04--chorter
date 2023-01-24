@@ -48,7 +48,7 @@ const Paragraph = styled.p`
   font-weight: 400;
   color: #1a1a1a;
 
-  max-width: 65ch;
+  max-width: 64ch;
 `;
 
 export {

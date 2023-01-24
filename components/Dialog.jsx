@@ -13,7 +13,7 @@ const StyledDialog = styled.div`
   border-radius: 6px;
   border: 1px solid #cccccc;
 
-  max-width: 65ch;
+  max-width: 64ch;
 `;
 
 const StyledHeader = styled.header`
