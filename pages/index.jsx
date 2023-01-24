@@ -53,9 +53,7 @@ export default function Home() {
               Chorter is a chore management app that helps you manage your time.
             </p>
           </div>
-          <Dialog title={"Start your session"}>
-            <SessionFlow />
-          </Dialog>
+          <SessionFlow />
         </StyledAction>
       </StyledMain>
 
