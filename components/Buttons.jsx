@@ -3,17 +3,17 @@ import styled, { css } from "styled-components";
 const getVariantStyle = (variant = "primary") =>
   ({
     primary: css`
-        background-color: var(--primary);
-        color: #fff;
+      background-color: var(--primary);
+      color: #fff;
     `,
     stroke: css`
-        background-color: transparent;
-        border: 2px solid var(--primary);
-        color: var(--primary);
+      background-color: transparent;
+      box-shadow: inset 0px 0px 0px 2px var(--primary);
+      color: var(--primary);
     `,
     secondary: css`
-        background-color: var(--secondary);
-        color: var(#fff);
+      background-color: var(--secondary);
+      color: black;
     `,
   }[variant]);
 
@@ -34,40 +34,40 @@ const getSizeStyle = (size = "medium") =>
   }[size]);
 
 const Button = styled.a`
-    cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
-    opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
 
-    user-select: none;
+  user-select: none;
 
-    height: fit-content;
+  height: fit-content;
 
-    display: inline-block;
-    height: fit-content;
-    border-radius: 6px;
-    border: none;
+  display: inline-block;
+  height: fit-content;
+  border-radius: 6px;
+  border: none;
 
-    background-color: var(--primary);
-    color: #fff;
-    
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: inherit;
+  background-color: var(--primary);
+  color: #fff;
 
-    ${({ variant }) => getVariantStyle(variant)}
-    ${({ size }) => getSizeStyle(size)}
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+
+  ${({ variant }) => getVariantStyle(variant)}
+  ${({ size }) => getSizeStyle(size)}
 
     ${({ disabled }) => {
-        if (!disabled) {
-        return css`
-            &:hover:not(:disabled) {
-            filter: brightness(0.95);
-            }
-            &:active:not(:disabled) {
-            filter: brightness(0.9);
-            }
-        `;
+    if (!disabled) {
+      return css`
+        &:hover:not(:disabled) {
+          filter: brightness(0.95);
         }
-    }}
+        &:active:not(:disabled) {
+          filter: brightness(0.9);
+        }
+      `;
+    }
+  }}
 `;
 
-export { Button };
+export default Button;
