@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Input from "./Input";
+import ListButton from "../ListButton";
 
 import styled from "styled-components";
 
@@ -81,7 +82,7 @@ const Task = ({ description, onChange }) => {
         />
       </StyledChore>
       {!chore.break.description && (
-        <button onClick={toggleBreak}>Add break</button>
+        <ListButton onClick={toggleBreak}>Add break</ListButton>
       )}
       {chore.break.description && (
         <div>
