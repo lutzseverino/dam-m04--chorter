@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import Dialog from "../components/Dialog";
 
 import styled from "styled-components";
+import Footer from "../components/Footer";
 
 const StyledMain = styled.main`
   display: flex;
@@ -54,7 +55,9 @@ export default function Home() {
         </StyledAction>
       </StyledMain>
 
-      {/* <Footer /> */}
+      <Footer />
+
     </>
+
   );
 }
