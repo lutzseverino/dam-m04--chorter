@@ -33,7 +33,7 @@ const StyledNav = styled.nav`
 const NavBar = ({ continued }) => {
   return (
     <StyledNav continued={continued}>
-      <a href="#/">
+      <a href="/">
         <Image
           src="/brand/logo/light-full.svg"
           alt="Chorter Full Logo"
@@ -44,8 +44,8 @@ const NavBar = ({ continued }) => {
       </a>
       <div>
         <div>
-          <a href="#">Home</a>
-          <a href="#">About</a>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
         </div>
         <div>
           <Button variant="stroke" href="/login">
