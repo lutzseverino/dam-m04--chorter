@@ -1,14 +1,29 @@
 import React, { useState } from "react";
-import Input from "./Input";
 
-import styled from "styled-components";
+import Input from "./Input";
 import Task from "./Task";
 import Dialog from "../Dialog";
+import Button from "../Buttons";
+
+import styled from "styled-components";
 
 const StyledSessionFlow = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+`;
+
+const StyledTasks = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+`;
+
+const StyledFlowButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const SessionFlow = () => {
@@ -59,13 +74,19 @@ const SessionFlow = () => {
   return (
     <Dialog title={"Start a quick session"}>
       <StyledSessionFlow>
-        {tasks.map((task, index) => (
-          <Task
-            key={index}
-            description={task.description}
-            onChange={(e) => handleChange(e, index)}
-          />
-        ))}
+        <StyledTasks>
+          {tasks.map((task, index) => (
+            <Task
+              key={index}
+              description={task.description}
+              onChange={(e) => handleChange(e, index)}
+            />
+          ))}
+        </StyledTasks>
+        <StyledFlowButtons>
+          <Button variant="secondary">Auto detect</Button>
+          <Button>Start</Button>
+        </StyledFlowButtons>
       </StyledSessionFlow>
     </Dialog>
   );

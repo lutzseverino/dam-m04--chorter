@@ -1,3 +1,5 @@
+import { Heading2 } from "./Headings";
+
 import styled from "styled-components";
 
 const StyledDialog = styled.div`
@@ -26,7 +28,7 @@ const Dialog = ({ title, children, closeable, onClose }) => {
   return (
     <StyledDialog>
       <StyledHeader>
-        <h2>{title}</h2>
+        <Heading2>{title}</Heading2>
         {closeable && <button onClick={onClose}></button>}
       </StyledHeader>
       {children}

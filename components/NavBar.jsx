@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Button from "./Buttons";
+
 import styled from "styled-components";
 
 const StyledNav = styled.nav`
@@ -21,7 +23,8 @@ const StyledNav = styled.nav`
     align-items: center;
     gap: 2rem;
 
-    a {
+    & > * {
+      display flex;
       gap: 1rem;
     }
   }
@@ -45,8 +48,10 @@ const NavBar = ({ continued }) => {
           <a href="#">About</a>
         </div>
         <div>
-          <a href="/login">Login</a>
-          <a href="/signup">Sign Up</a>
+          <Button variant="stroke" href="/login">
+            Log in
+          </Button>
+          <Button href="/signup">Sign up</Button>
         </div>
       </div>
     </StyledNav>
