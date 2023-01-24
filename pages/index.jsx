@@ -3,9 +3,11 @@ import Head from "next/head";
 import NavBar from "../components/NavBar";
 import Dialog from "../components/Dialog";
 import Input from "../components/forms/Input";
+import SessionFlow from "../components/forms/SessionFlow";
+
+import { Paragraph } from "../components/Headings";
 
 import styled from "styled-components";
-import SessionFlow from "../components/forms/SessionFlow";
 
 const StyledMain = styled.main`
   display: flex;
@@ -43,21 +45,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar />
-
       <StyledMain>
         <StyledAction>
           <div>
             <h1>Chores made shorter</h1>
-            <p>
+            <Paragraph>
               Chorter is a chore management app that helps you manage your time.
-            </p>
+            </Paragraph>
           </div>
           <SessionFlow />
         </StyledAction>
       </StyledMain>
-
-      {/* <Footer /> */}
     </>
   );
 }
