@@ -20,13 +20,11 @@ const StyledListButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  width: auto;
-  height: auto;
   border-radius: 6px;
   border: none;
 
   background-color: var(--primary);
-  color: #fff;
+  color: white;
 
   font-family: inherit;
   font-size: 0.75rem;
@@ -35,7 +33,7 @@ const StyledListButton = styled.button`
 
   z-index: 1;
 
-  &::before {
+  &::after {
     content: "";
     display: block;
     width: 100%;
