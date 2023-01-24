@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import Input from "./Input";
 import Task from "./Task";
 import Dialog from "../Dialog";
 import Button from "../Buttons";
@@ -29,10 +28,6 @@ const StyledFlowButtons = styled.div`
 const SessionFlow = () => {
   const [tasks, setTasks] = useState([{ description: "" }]);
 
-  React.useEffect(() => {
-    console.log(tasks);
-  }, [tasks]);
-
   const addTask = (index) => {
     setTasks([
       ...tasks.slice(0, index + 1),
@@ -58,16 +53,6 @@ const SessionFlow = () => {
 
     if (e.target.value !== "" && index === tasks.length - 1) {
       addTask(index);
-    }
-
-    // when value is "hi", turn it into "hello"
-
-    if (e.target.value === "hi") {
-      setTasks(
-        tasks.map((task, i) =>
-          i === index ? { ...task, description: "hello" } : task
-        )
-      );
     }
   };
 
