@@ -8,10 +8,10 @@ const StyledDialog = styled.div`
   padding: 1rem 2rem;
 
   background-color: white;
-  border-radius: 0.4rem;
+  border-radius: 6px;
   border: 1px solid #cccccc;
 
-  max-width: 100%;
+  max-width: 65ch;
 `;
 
 const StyledHeader = styled.header`

@@ -9,7 +9,7 @@ const Input = styled.input`
   padding: 0.2rem 0.4rem;
 
   background-color: var(--background);
-  border-radius: 0.4rem;
+  border-radius: 6px;
   border: 1px solid var(--background-tone);
 
   font: inherit;
