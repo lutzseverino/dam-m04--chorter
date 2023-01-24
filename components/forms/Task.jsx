@@ -3,13 +3,12 @@ import Input from "./Input";
 import ListButton from "../ListButton";
 
 import styled from "styled-components";
+import { css } from "styled-components";
 
 const StyledTask = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-
-  width: 32ch;
 `;
 
 const StyledChore = styled.div`
@@ -18,13 +17,31 @@ const StyledChore = styled.div`
   gap: 1rem;
 `;
 
-const StyledDescriptionInput = styled(Input)`
-  width: 75%;
+const descInput = css`
+  max-width: 256px;
 `;
 
-const StyledTimeInput = styled(Input)`
-  width: 25%;
+const timeInput = css`
+  max-width: 96px;
   text-align: center;
+`;
+
+const StyledChoreDescInput = styled(Input)`
+  ${descInput}
+`;
+
+const StyledChoreTimeInput = styled(Input)`
+  ${timeInput}
+`;
+
+const StyledBreakDescInput = styled(Input)`
+  ${descInput}
+  font-size: 0.75rem;
+`;
+
+const StyledBreakTimeInput = styled(Input)`
+  ${timeInput}
+  font-size: 0.75rem;
 `;
 
 const Task = ({ description, onChange }) => {
@@ -66,14 +83,14 @@ const Task = ({ description, onChange }) => {
   return (
     <StyledTask>
       <StyledChore>
-        <StyledDescriptionInput
+        <StyledChoreDescInput
           type="text"
           name="description"
           placeholder="Describe your chore"
           value={chore.description}
           onChange={handleChange}
         />
-        <StyledTimeInput
+        <StyledChoreTimeInput
           type="text"
           name="time"
           placeholder="HH:MM"
@@ -87,14 +104,14 @@ const Task = ({ description, onChange }) => {
       {chore.break.description && (
         <div>
           <StyledChore>
-            <StyledDescriptionInput
+            <StyledBreakDescInput
               type="text"
               name="break.description"
               value={chore.break.description}
               onChange={handleChange}
               disabled
             />
-            <StyledTimeInput
+            <StyledBreakTimeInput
               type="text"
               name="break.time"
               placeholder="HH:MM"
