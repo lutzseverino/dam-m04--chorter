@@ -44,7 +44,7 @@ const StyledBreakTimeInput = styled(Input)`
   font-size: 0.75rem;
 `;
 
-const Task = ({ description, onChange }) => {
+const Task = ({ description, onChange, isBreakPossible }) => {
   const [chore, setChore] = useState({
     description: description,
     time: "",
@@ -98,29 +98,33 @@ const Task = ({ description, onChange }) => {
           onChange={handleChange}
         />
       </StyledChore>
-      {!chore.break.description && (
-        <ListButton onClick={toggleBreak}>Add break</ListButton>
-      )}
-      {chore.break.description && (
-        <div>
-          <StyledChore>
-            <StyledBreakDescInput
-              type="text"
-              name="break.description"
-              value={chore.break.description}
-              onChange={handleChange}
-              disabled
-            />
-            <StyledBreakTimeInput
-              type="text"
-              name="break.time"
-              placeholder="HH:MM"
-              value={chore.break.time}
-              onChange={handleChange}
-            />
-            <button onClick={toggleBreak}>X</button>
-          </StyledChore>
-        </div>
+      {isBreakPossible && (
+        <>
+          {!chore.break.description && (
+            <ListButton onClick={toggleBreak}>Add break</ListButton>
+          )}
+          {chore.break.description && (
+            <div>
+              <StyledChore>
+                <StyledBreakDescInput
+                  type="text"
+                  name="break.description"
+                  value={chore.break.description}
+                  onChange={() => {}}
+                  disabled
+                />
+                <StyledBreakTimeInput
+                  type="text"
+                  name="break.time"
+                  placeholder="HH:MM"
+                  value={chore.break.time}
+                  onChange={handleChange}
+                />
+                <button onClick={toggleBreak}>X</button>
+              </StyledChore>
+            </div>
+          )}
+        </>
       )}
     </StyledTask>
   );

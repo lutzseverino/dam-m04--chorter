@@ -26,7 +26,16 @@ const StyledFlowButtons = styled.div`
 `;
 
 const SessionFlow = () => {
-  const [tasks, setTasks] = useState([{ description: "" }]);
+  const [tasks, setTasks] = useState([
+    {
+      description: "",
+      time: "",
+      break: {
+        description: "",
+        time: "",
+      },
+    },
+  ]);
 
   const addTask = (index) => {
     setTasks([
@@ -41,18 +50,22 @@ const SessionFlow = () => {
   };
 
   const handleChange = (e, index) => {
+    console.log(e.target.name);
+
     setTasks(
       tasks.map((task, i) =>
-        i === index ? { ...task, description: e.target.value } : task
+        i === index ? { ...task, [e.target.name]: e.target.value } : task
       )
     );
 
-    if (e.target.value === "") {
-      deleteTask(index);
-    }
+    if (e.target.name === "description") {
+      if (e.target.value === "") {
+        deleteTask(index);
+      }
 
-    if (e.target.value !== "" && index === tasks.length - 1) {
-      addTask(index);
+      if (e.target.value !== "" && index === tasks.length - 1) {
+        addTask(index);
+      }
     }
   };
 
@@ -65,6 +78,7 @@ const SessionFlow = () => {
               key={index}
               description={task.description}
               onChange={(e) => handleChange(e, index)}
+              isBreakPossible={index !== tasks.length - 1}
             />
           ))}
         </StyledTasks>
