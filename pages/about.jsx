@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import policy from "raw-loader!./about.md";
+import about from "raw-loader!./about.md";
 
 import {
   Heading1,
@@ -9,23 +9,24 @@ import {
   Heading5,
   Heading6,
   Paragraph,
+  UnorderedList,
 } from "../components/Headings";
 
 import styled from "styled-components";
 
-const StyledPolicy = styled.div`
+const StyledAbout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 `;
 
-export default function Policy() {
+export default function About() {
   return (
-    <StyledPolicy>
+    <StyledAbout>
       <div>
         <ReactMarkdown
-          children={policy}
+          children={about}
           components={{
             h1: Heading1,
             h2: Heading2,
@@ -34,9 +35,10 @@ export default function Policy() {
             h5: Heading5,
             h6: Heading6,
             p: Paragraph,
+            ul: UnorderedList,
           }}
         />
       </div>
-    </StyledPolicy>
+    </StyledAbout>
   );
 }

@@ -56,6 +56,5 @@ export default function Home() {
         </StyledAction>
       </StyledMain>
     </>
-
   );
 }
