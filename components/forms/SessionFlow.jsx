@@ -6,6 +6,8 @@ import Button from "../Buttons";
 
 import styled from "styled-components";
 
+import { ReactSortable } from "react-sortablejs";
+
 const StyledSessionFlow = styled.div`
   display: flex;
   flex-direction: column;
@@ -73,14 +75,16 @@ const SessionFlow = () => {
     <Dialog title={"Start a quick session"}>
       <StyledSessionFlow>
         <StyledTasks>
-          {tasks.map((task, index) => (
-            <Task
-              key={index}
-              description={task.description}
-              onChange={(e) => handleChange(e, index)}
-              isBreakPossible={index !== tasks.length - 1}
-            />
-          ))}
+          <ReactSortable handle=".handle" animation={150} list={tasks} setList={setTasks}>
+            {tasks.map((task, index) => (
+                <Task
+                  key={index}
+                  description={task.description}
+                  onChange={(e) => handleChange(e, index)}
+                  isBreakPossible={index !== tasks.length - 1}
+                />
+            ))}
+          </ReactSortable>
         </StyledTasks>
         <StyledFlowButtons>
           <Button variant="secondary">Auto detect</Button>
