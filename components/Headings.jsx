@@ -51,6 +51,13 @@ const Paragraph = styled.p`
   max-width: 64ch;
 `;
 
+const UnorderedList = styled.ul`
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: #1a1a1a;
+`;
+
 export {
   Heading1,
   Heading2,
@@ -59,4 +66,5 @@ export {
   Heading5,
   Heading6,
   Paragraph,
+  UnorderedList,
 };

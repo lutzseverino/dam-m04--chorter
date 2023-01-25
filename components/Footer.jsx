@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Heading1, Heading2, UnorderedList } from "./Headings";
+
 const StyledFooter = styled.footer`
   display: flex;
   align-items: center;
@@ -26,23 +28,23 @@ const StyledFooter = styled.footer`
 const Footer = () => {
   return (
     <StyledFooter>
-      <h1>Chores made shorter</h1>
-      <ul>
+      <Heading1>Chores made shorter</Heading1>
+      <UnorderedList>
         <li>
-          <h2>Legal</h2>
+          <Heading2>Legal</Heading2>
         </li>
         <li>
-          <a href="/policy">Privacy</a>
+          <a href="/privacy">Privacy</a>
         </li>
-      </ul>
-      <ul>
+      </UnorderedList>
+      <UnorderedList>
         <li>
-          <h2>Company</h2>
+          <Heading2>Company</Heading2>
         </li>
         <li>
           <a href="/about">About</a>
         </li>
-      </ul>
+      </UnorderedList>
     </StyledFooter>
   );
 };
