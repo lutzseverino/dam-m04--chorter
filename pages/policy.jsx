@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import policy from "raw-loader!./about.md";
+import policy from "raw-loader!./policy.md";
 
 import {
   Heading1,

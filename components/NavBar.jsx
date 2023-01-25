@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Button from "./Buttons";
+
 import styled from "styled-components";
 
 const StyledNav = styled.nav`
@@ -21,7 +23,8 @@ const StyledNav = styled.nav`
     align-items: center;
     gap: 2rem;
 
-    a {
+    & > * {
+      display flex;
       gap: 1rem;
     }
   }
@@ -30,7 +33,7 @@ const StyledNav = styled.nav`
 const NavBar = ({ continued }) => {
   return (
     <StyledNav continued={continued}>
-      <a href="#/">
+      <a href="/">
         <Image
           src="/brand/logo/light-full.svg"
           alt="Chorter Full Logo"
@@ -41,12 +44,14 @@ const NavBar = ({ continued }) => {
       </a>
       <div>
         <div>
-          <a href="#">Home</a>
-          <a href="#">About</a>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
         </div>
         <div>
-          <a href="/login">Login</a>
-          <a href="/signup">Sign Up</a>
+          <Button variant="stroke" href="/login">
+            Log in
+          </Button>
+          <Button href="/signup">Sign up</Button>
         </div>
       </div>
     </StyledNav>
