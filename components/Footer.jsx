@@ -1,42 +1,50 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
-    footer {
-}
-background-color: #494a5c;
-color: white;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 
-.footer-container {
+  padding: 2rem 6rem;
+
+  background-color: #494a5c;
+  color: white;
+  width: 100%;
+  background-color: #494a5c;
+  height: 256px;
+
+  & > ul {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    width: 80%;
-    margin: 0 auto;
-    background-color: #494a5c;
-    height: 256px;
-}
+    flex-direction: column;
 
-
-.footer-item {
-    width: 30%;
-    text-align: center;
-    background-color: #494a5c;
-}
-
+    & > li {
+      list-style: none;
+    }
+  }
 `;
 
 const Footer = () => {
-    return (
-        <StyledFooter>
-        <footer>
-            <div class="footer-container">
-                <a class="footer-item" href="https:">Policy</a>
-                <a class="footer-item" href="https:">Item 2</a>
-                <a class="footer-item" href="https:">Item 3</a>
-            </div>
-        </footer>
-        </StyledFooter>
-    )
-}
+  return (
+    <StyledFooter>
+      <h1>Chores made shorter</h1>
+      <ul>
+        <li>
+          <h2>Legal</h2>
+        </li>
+        <li>
+          <a href="/policy">Privacy</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <h2>Company</h2>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+      </ul>
+    </StyledFooter>
+  );
+};
 
 export default Footer;
