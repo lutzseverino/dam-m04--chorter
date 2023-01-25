@@ -5,6 +5,7 @@ import SessionFlow from "../components/forms/SessionFlow";
 import { Heading1, Paragraph } from "../components/Headings";
 
 import styled from "styled-components";
+import Footer from "../components/Footer";
 
 const StyledMain = styled.main`
   display: flex;
@@ -55,5 +56,6 @@ export default function Home() {
         </StyledAction>
       </StyledMain>
     </>
+
   );
 }
