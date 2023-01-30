@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styled from "styled-components";
 
 import SessionFlow from "../components/forms/SessionFlow";
@@ -10,14 +9,10 @@ import P from "../components/typography/Paragraph";
 
 const StyledMain = styled.main`
   display: flex;
+
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-`;
-
-const StyledMainSection = styled(Section)`
-  background-image: url("/brand/cta-bkg.svg");
-  background-size: cover;
 `;
 
 export default function Home() {
@@ -31,7 +26,7 @@ export default function Home() {
       </Head>
 
       <StyledMain>
-        <StyledMainSection isColumn>
+        <Section isColumn image={"/brand/cta-bkg.svg"}>
           <div>
             <H1>Chores made Shorter</H1>
             <P>
@@ -40,7 +35,7 @@ export default function Home() {
             </P>
           </div>
           <SessionFlow />
-        </StyledMainSection>
+        </Section>
 
         <Section>
           <P>
