@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
 import Task from "./Task";
-import Dialog from "../Dialog";
-import Button from "../Buttons";
-import { H2 } from "../Headings";
+import Dialog from "../actions/Dialog";
+import Button from "../actions/Buttons";
 
-import styled from "styled-components";
+import { H3 } from "../typography/Headings";
 
 const StyledSessionFlow = styled.div`
   display: flex;
@@ -72,7 +72,7 @@ const SessionFlow = () => {
 
   return (
     <Dialog>
-      <H2>Start a quick session</H2>
+      <H3>Start a quick session</H3>
       <StyledSessionFlow>
         <StyledTasks>
           {tasks.map((task, index) => (

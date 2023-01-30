@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Input from "./Input";
-import ListButton from "../ListButton";
-
 import styled from "styled-components";
 import { css } from "styled-components";
+
+import Input from "../actions/Input";
+import ListButton from "../actions/ListButton";
 
 const StyledTask = styled.div`
   display: flex;

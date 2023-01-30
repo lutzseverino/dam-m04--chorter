@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-import { H1, H2, UnorderedList } from "./Headings";
+import { H1, H2 } from "./typography/Headings";
+import UL from "./typography/UnorderedList";
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -29,22 +30,22 @@ const Footer = () => {
   return (
     <StyledFooter>
       <H1>Chores made shorter</H1>
-      <UnorderedList>
+      <UL>
         <li>
           <H2>Legal</H2>
         </li>
         <li>
           <a href="/privacy">Privacy</a>
         </li>
-      </UnorderedList>
-      <UnorderedList>
+      </UL>
+      <UL>
         <li>
           <H2>Company</H2>
         </li>
         <li>
           <a href="/about">About</a>
         </li>
-      </UnorderedList>
+      </UL>
     </StyledFooter>
   );
 };
