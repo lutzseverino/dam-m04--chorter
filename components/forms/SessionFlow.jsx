@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Task from "./Task";
 import Dialog from "../Dialog";
 import Button from "../Buttons";
+import { Heading2 } from "../Headings";
 
 import styled from "styled-components";
 
@@ -18,7 +19,7 @@ const StyledTasks = styled.div`
   gap: 0.4rem;
 `;
 
-const StyledFlowButtons = styled.div`
+const StyledSessionFlowButtons = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -70,7 +71,8 @@ const SessionFlow = () => {
   };
 
   return (
-    <Dialog title={"Start a quick session"}>
+    <Dialog>
+      <Heading2>Start a quick session</Heading2>
       <StyledSessionFlow>
         <StyledTasks>
           {tasks.map((task, index) => (
@@ -82,10 +84,10 @@ const SessionFlow = () => {
             />
           ))}
         </StyledTasks>
-        <StyledFlowButtons>
+        <StyledSessionFlowButtons>
           <Button variant="secondary">Auto detect</Button>
           <Button>Start</Button>
-        </StyledFlowButtons>
+        </StyledSessionFlowButtons>
       </StyledSessionFlow>
     </Dialog>
   );
