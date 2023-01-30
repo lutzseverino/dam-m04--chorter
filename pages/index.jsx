@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import SessionFlow from "../components/forms/SessionFlow";
 
-import { Heading1, Paragraph } from "../components/Headings";
+import { H1, Paragraph } from "../components/Headings";
 
 import styled from "styled-components";
 
@@ -18,12 +18,12 @@ const StyledAction = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 24px;
 
   text-align: center;
 
   width: 100%;
-  min-height: 32rem;
+  min-height: 512px;
   padding: 2rem 6rem;
 
   background-image: url("/brand/cta-bkg.svg");
@@ -43,7 +43,7 @@ export default function Home() {
       <StyledMain>
         <StyledAction>
           <div>
-            <Heading1>Chores made Shorter</Heading1>
+            <H1>Chores made Shorter</H1>
             <Paragraph>
               Get started rigth now at completely no cost. Chorter is a free
               task management app that helps you get things done.

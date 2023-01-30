@@ -2,12 +2,12 @@ import ReactMarkdown from "react-markdown";
 import privacy from "raw-loader!./privacy.md";
 
 import {
-  Heading1,
-  Heading2,
-  Heading3,
-  Heading4,
-  Heading5,
-  Heading6,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
   Paragraph,
   UnorderedList,
 } from "../components/Headings";
@@ -32,12 +32,12 @@ export default function Privacy() {
         <ReactMarkdown
           children={privacy}
           components={{
-            h1: Heading1,
-            h2: Heading2,
-            h3: Heading3,
-            h4: Heading4,
-            h5: Heading5,
-            h6: Heading6,
+            h1: H1,
+            h2: H2,
+            h3: H3,
+            h4: H4,
+            h5: H5,
+            h6: H6,
             p: Paragraph,
             ul: UnorderedList,
           }}
