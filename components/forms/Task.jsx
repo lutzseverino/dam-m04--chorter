@@ -3,18 +3,19 @@ import styled from "styled-components";
 import { css } from "styled-components";
 
 import Input from "../actions/Input";
+import Button from "../actions/Button";
 import ListButton from "../actions/ListButton";
 
 const StyledTask = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 8px;
 `;
 
 const StyledChore = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 16px;
 `;
 
 const descInput = css`
@@ -36,14 +37,10 @@ const StyledChoreTimeInput = styled(Input)`
 
 const StyledBreakDescInput = styled(Input)`
   ${descInput}
-  font-size: 0.75rem;
-  padding: 4px 8px;
 `;
 
 const StyledBreakTimeInput = styled(Input)`
   ${timeInput}
-  font-size: 0.75rem;
-  padding: 4px 8px;
 `;
 
 const Task = ({ description, onChange, isBreakPossible }) => {
@@ -109,6 +106,7 @@ const Task = ({ description, onChange, isBreakPossible }) => {
             <div>
               <StyledChore>
                 <StyledBreakDescInput
+                  size="small"
                   type="text"
                   name="break.description"
                   value={chore.break.description}
@@ -116,13 +114,16 @@ const Task = ({ description, onChange, isBreakPossible }) => {
                   disabled
                 />
                 <StyledBreakTimeInput
+                  size="small"
                   type="text"
                   name="break.time"
                   placeholder="HH:MM"
                   value={chore.break.time}
                   onChange={handleChange}
                 />
-                <button onClick={toggleBreak}>X</button>
+                <Button size="small" variant="secondary" onClick={toggleBreak}>
+                  X
+                </Button>
               </StyledChore>
             </div>
           )}
