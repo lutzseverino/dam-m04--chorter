@@ -15,9 +15,6 @@ const StyledInput = styled.input`
 
   box-shadow: inset 0px 0px 0px 1px var(--background-tone);
 
-  font: inherit;
-  color: inherit;
-
   ${({ size }) => getSize(size)}
 
   &:focus {

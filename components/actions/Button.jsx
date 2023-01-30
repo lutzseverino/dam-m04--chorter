@@ -24,8 +24,6 @@ const StyledActionable = css`
   cursor: pointer;
   user-select: none;
 
-  height: fit-content;
-
   border-radius: 6px;
   border: none;
 
