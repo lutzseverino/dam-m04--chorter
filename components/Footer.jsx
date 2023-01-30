@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { Heading1, Heading2, UnorderedList } from "./Headings";
+import { H1, H2 } from "./typography/Headings";
+import UL from "./typography/UnorderedList";
 
 const StyledFooter = styled.footer`
   display: grid;
@@ -46,24 +47,24 @@ a {
 const Footer = () => {
   return (
     <StyledFooter>
-      <Heading1 href="/">Chores made shorter</Heading1>
+      <H1 href="/">Chores made shorter</H1>
       <hr />
-      <UnorderedList>
+      <UL>
         <li>
-          <Heading2>Legal</Heading2>
+          <H2>Legal</H2>
         </li>
         <li>
           <a href="/privacy">Privacy</a>
         </li>
-      </UnorderedList>
-      <UnorderedList>
+      </UL>
+      <UL>
         <li>
-          <Heading2>Company</Heading2>
+          <H2>Company</H2>
         </li>
         <li>
           <a href="/about">About</a>
         </li>
-      </UnorderedList>
+      </UL>
     </StyledFooter>
   );
 };

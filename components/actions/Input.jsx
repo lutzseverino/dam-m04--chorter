@@ -1,19 +1,24 @@
 import styled from "styled-components";
+import getSize from "./sizeUtils";
 
-const Input = styled.input`
+const StyledInput = styled.input`
   display: flex;
+
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  padding: 0.2rem 0.4rem;
-
   background-color: var(--background);
+
   border-radius: 6px;
-  border: 1px solid var(--background-tone);
+  border: none;
+
+  box-shadow: inset 0px 0px 0px 1px var(--background-tone);
 
   font: inherit;
   color: inherit;
+
+  ${({ size }) => getSize(size)}
 
   &:focus {
     outline: 2px solid var(--primary);
@@ -22,8 +27,14 @@ const Input = styled.input`
   &:disabled {
     cursor: not-allowed;
     background-color: var(--background-tone);
-    border: 1px solid var(--background-secondary-tone);
+    box-shadow: inset 0px 0px 0px 1px var(--background-secondary-tone);
   }
 `;
+
+const Input = (props) => {
+  const { size = "medium" } = props;
+
+  return <StyledInput {...props} size={size} />;
+};
 
 export default Input;

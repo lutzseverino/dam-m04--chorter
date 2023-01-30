@@ -1,36 +1,18 @@
 import Head from "next/head";
+import styled from "styled-components";
 
 import SessionFlow from "../components/forms/SessionFlow";
+import Section from "../components/Section";
 
-import { Heading1, Paragraph } from "../components/Headings";
-
-import styled from "styled-components";
-import Footer from "../components/Footer";
+import { H1 } from "../components/typography/Headings";
+import P from "../components/typography/Paragraph";
 
 const StyledMain = styled.main`
   display: flex;
+
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-`;
-
-const StyledAction = styled.div`
-  display: flex;
-  flex-direction: row;
-
-  justify-content: space-evenly;
-  align-items: center;
-
-  width: 100%;
-  min-height: 32rem;
-  padding: 2rem 6rem;
-
-  background-image: url("/brand/cta-bkg.svg");
-  background-size: cover;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 
 export default function Home() {
@@ -44,16 +26,24 @@ export default function Home() {
       </Head>
 
       <StyledMain>
-        <StyledAction>
+        <Section isColumn image={"/brand/cta-bkg.svg"}>
           <div>
-            <Heading1>Chores made Shorter</Heading1>
-            <Paragraph>
+            <H1>Chores made Shorter</H1>
+            <P>
               Get started rigth now at completely no cost. Chorter is a free
               task management app that helps you get things done.
-            </Paragraph>
+            </P>
           </div>
           <SessionFlow />
-        </StyledAction>
+        </Section>
+
+        <Section>
+          <P>
+            Chorter is a free task management app that helps you get things
+            done.
+          </P>
+          {/* TODO */}
+        </Section>
       </StyledMain>
     </>
   );
