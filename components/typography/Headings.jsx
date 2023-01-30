@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import css from "styled-jsx/css";
+import styled, { css } from "styled-components";
 
 /**
  * Heading sizes inspired by Bootstrap 5
@@ -9,7 +8,7 @@ import css from "styled-jsx/css";
 const headings = css`
   margin-top: 16px;
   margin-bottom: 16px;
-  font-weight: 700;
+  font-weight: bold;
 `;
 
 const H1 = styled.h1`

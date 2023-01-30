@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const StyledBackdrop = styled.div`
   position: fixed;
@@ -13,11 +13,11 @@ const StyledBackdrop = styled.div`
 const StyledDialog = styled.div`
   ${({ floating }) =>
     floating &&
-    `
-    position: fixed; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
+    css`
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     `}
 
   max-width: 64ch;

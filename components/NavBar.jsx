@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styled from "styled-components";
 
-import Button from "./actions/Buttons";
+import Button from "./actions/Button";
 
 const StyledNav = styled.nav`
   position: sticky;
