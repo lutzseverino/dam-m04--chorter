@@ -6,7 +6,7 @@ const Input = styled.input`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0.2rem 0.4rem;
+  padding: 8px 16px;
 
   background-color: var(--background);
   border-radius: 6px;

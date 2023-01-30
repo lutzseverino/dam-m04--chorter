@@ -14,7 +14,7 @@ const StyledNav = styled.nav`
   padding: 2rem 6rem;
   width: 100%;
 
-  background-color: "var(--background)";
+  background-color: var(--background);
 
   div {
     display: flex;
@@ -24,7 +24,7 @@ const StyledNav = styled.nav`
     gap: 2rem;
 
     & > * {
-      display flex;
+      display: flex;
       gap: 1rem;
     }
   }

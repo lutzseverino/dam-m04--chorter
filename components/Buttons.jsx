@@ -21,15 +21,15 @@ const getSizeStyle = (size = "medium") =>
   ({
     small: css`
       font-size: 0.75rem;
-      padding: 0.25rem 0.5rem;
+      padding: 4px 8px;
     `,
     medium: css`
       font-size: 1rem;
-      padding: 0.5rem 1rem;
+      padding: 8px 16px;
     `,
     large: css`
       font-size: 1.25rem;
-      padding: 0.75rem 1.5rem;
+      padding: 12px 24px;
     `,
   }[size]);
 

@@ -37,11 +37,13 @@ const StyledChoreTimeInput = styled(Input)`
 const StyledBreakDescInput = styled(Input)`
   ${descInput}
   font-size: 0.75rem;
+  padding: 4px 8px;
 `;
 
 const StyledBreakTimeInput = styled(Input)`
   ${timeInput}
   font-size: 0.75rem;
+  padding: 4px 8px;
 `;
 
 const Task = ({ description, onChange, isBreakPossible }) => {
