@@ -6,6 +6,7 @@ import Section from "../components/Section";
 
 import { H1 } from "../components/typography/Headings";
 import P from "../components/typography/Paragraph";
+import Image from "next/image";
 
 const StyledMain = styled.main`
   display: flex;
@@ -37,12 +38,36 @@ export default function Home() {
           <SessionFlow />
         </Section>
 
+        <Section isOpposite>
+          <div>
+            <H1>Free tastes better</H1>
+            <P>
+              Chorter is a free task management app that helps you get things
+              done.
+            </P>
+          </div>
+          <Image
+            src="/brand/logo/dark-small.svg"
+            alt="Chorter Small Logo"
+            width={115}
+            height={94}
+          />
+        </Section>
+
         <Section>
-          <P>
-            Chorter is a free task management app that helps you get things
-            done.
-          </P>
-          {/* TODO */}
+          <Image
+            src="/brand/100.svg"
+            alt="Chorter Small Logo"
+            width={237.03}
+            height={69.89}
+          />
+          <div>
+            <H1>Don't let yourself fail</H1>
+            <P>
+              Help yourself complete your tasks by creating a list of chores and
+              letting Chorter help you get things done.
+            </P>
+          </div>
         </Section>
       </StyledMain>
     </>
