@@ -5,14 +5,15 @@ import Button from "./actions/Button";
 
 const StyledNav = styled.nav`
   position: sticky;
-
   display: flex;
+
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
 
-  padding: 2rem 6rem;
   width: 100%;
+
+  padding: 32px 96px;
 
   background-color: var(--background);
 
