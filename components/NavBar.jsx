@@ -24,7 +24,7 @@ const StyledNav = styled.nav`
     gap: 2rem;
 
     & > * {
-      display flex;
+      display: flex;
       gap: 1rem;
     }
   }

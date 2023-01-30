@@ -1,25 +1,24 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 import { Heading1, Heading2, UnorderedList } from "./Headings";
 
 const StyledFooter = styled.footer`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  display: grid;
+  place-items: left;
+  grid-gap: 1rem;
   padding: 2rem 6rem;
   background-color: #494a5c;
   color: white;
   width: 100%;
-  background-color: #494a5c;
-  height: 256px;
-
+  
   & > ul {
-    display: flex;
-    flex-direction: column;
+  display: grid;
+  flex-direction: column;
 
-    & > li {
-      list-style: none;
-    }
+  & > li {
+    list-style: none;
+  }
   }
   a {
   box-shadow: inset 0 0 0 0 #ef223c;
@@ -47,7 +46,8 @@ a {
 const Footer = () => {
   return (
     <StyledFooter>
-      <Heading1>Chores made shorter</Heading1>
+      <Heading1 href="/">Chores made shorter</Heading1>
+      <hr />
       <UnorderedList>
         <li>
           <Heading2>Legal</Heading2>
