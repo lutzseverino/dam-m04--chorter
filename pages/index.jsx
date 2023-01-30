@@ -5,7 +5,6 @@ import SessionFlow from "../components/forms/SessionFlow";
 import { Heading1, Paragraph } from "../components/Headings";
 
 import styled from "styled-components";
-import Footer from "../components/Footer";
 
 const StyledMain = styled.main`
   display: flex;
@@ -16,10 +15,12 @@ const StyledMain = styled.main`
 
 const StyledAction = styled.div`
   display: flex;
-  flex-direction: row;
-
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
+
+  text-align: center;
 
   width: 100%;
   min-height: 32rem;
@@ -27,10 +28,6 @@ const StyledAction = styled.div`
 
   background-image: url("/brand/cta-bkg.svg");
   background-size: cover;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 
 export default function Home() {
