@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import "../node_modules/modern-normalize/modern-normalize.css";
+
 import Layout from "../app/Layout";
 
 import { Space_Grotesk } from "@next/font/google";
