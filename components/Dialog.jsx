@@ -1,43 +1,57 @@
-import { Heading2 } from "./Headings";
+import React, { useState } from "react";
 
 import styled from "styled-components";
 
+const StyledBackdrop = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+`;
+
 const StyledDialog = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  padding: 1rem 2rem;
-
-  background-color: white;
-  border-radius: 6px;
-  border: 1px solid #cccccc;
+  ${({ floating }) =>
+    floating &&
+    `
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    `}
 
   max-width: 64ch;
+
+  background: white;
+  padding: 16px 32px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
 `;
 
-const StyledHeader = styled.header`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-`;
+const Dialog = ({ onClose, children, floating }) => {
+  const [isVisible, setIsVisible] = useState(true);
 
-const Dialog = ({ title, children, closeable, onClose }) => {
+  const handleClose = () => {
+    if (onClose) onClose();
+
+    setIsVisible(false);
+  };
+
   return (
-    <StyledDialog>
-      <StyledHeader>
-        <Heading2>{title}</Heading2>
-        {closeable && <button onClick={onClose}></button>}
-      </StyledHeader>
-      {children}
-    </StyledDialog>
+    isVisible && (
+      <>
+        {floating && <StyledBackdrop onClick={handleClose} />}
+        <StyledDialog floating={floating}>
+          {children}
+          {onClose &&
+            {
+              /* TODO: Close button */
+            }}
+        </StyledDialog>
+      </>
+    )
   );
-};
-
-Dialog.defaultProps = {
-  onClose: () => {},
 };
 
 export default Dialog;
