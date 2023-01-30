@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Task from "./Task";
 import Dialog from "../actions/Dialog";
-import Button from "../actions/Buttons";
+import Button from "../actions/Button";
 
 import { H3 } from "../typography/Headings";
 
@@ -85,8 +85,10 @@ const SessionFlow = () => {
           ))}
         </StyledTasks>
         <StyledSessionFlowButtons>
-          <Button variant="secondary">Auto detect</Button>
-          <Button>Start</Button>
+          <Button isButton variant="secondary">
+            Auto detect
+          </Button>
+          <Button isButton>Start</Button>
         </StyledSessionFlowButtons>
       </StyledSessionFlow>
     </Dialog>
