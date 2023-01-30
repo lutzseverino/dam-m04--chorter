@@ -1,6 +1,8 @@
 import ReactMarkdown from "react-markdown";
 import privacy from "raw-loader!./privacy.md";
 
+import Section from "../../../components/Section";
+
 import {
   H1,
   H2,
@@ -8,26 +10,13 @@ import {
   H4,
   H5,
   H6,
-  Paragraph,
-  UnorderedList,
-} from "../components/Headings";
-
-import styled from "styled-components";
-
-const StyledPrivacy = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  & > div {
-    width: 64ch;
-  }
-`;
+} from "../../../components/typography/Headings";
+import Paragraph from "../../../components/typography/Paragraph";
+import UnorderedList from "../../../components/typography/UnorderedList";
 
 export default function Privacy() {
   return (
-    <StyledPrivacy>
+    <Section>
       <div>
         <ReactMarkdown
           children={privacy}
@@ -43,6 +32,6 @@ export default function Privacy() {
           }}
         />
       </div>
-    </StyledPrivacy>
+    </Section>
   );
 }
