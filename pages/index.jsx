@@ -29,7 +29,7 @@ export default function Home() {
       <StyledMain>
         <Section isColumn image={"/brand/cta-bkg.svg"}>
           <div>
-            <H1>Chores made Shorter</H1>
+            <H1>Chores made shorter</H1>
             <P>
               Get started rigth now at completely no cost. Chorter is a free
               task management app that helps you get things done.
@@ -40,14 +40,14 @@ export default function Home() {
 
         <Section isOpposite>
           <div>
-            <H1>Free tastes better</H1>
+            <H1>Lorem ipsum dolor</H1>
             <P>
-              Chorter is a free task management app that helps you get things
-              done.
+              Curabitur suscipit odio ut porta vestibulum. Nam vitae est in
+              libero commodo scelerisque at non augue.
             </P>
           </div>
           <Image
-            src="/brand/logo/dark-small.svg"
+            src="/brand/logo/unknown-small.svg"
             alt="Chorter Small Logo"
             width={115}
             height={94}
@@ -56,18 +56,34 @@ export default function Home() {
 
         <Section>
           <Image
-            src="/brand/100.svg"
+            src="/brand/logo/unknown-small.svg"
             alt="Chorter Small Logo"
-            width={237.03}
-            height={69.89}
+            width={115}
+            height={94}
           />
           <div>
-            <H1>Don't let yourself fail</H1>
+            <H1>Lorem ipsum dolor</H1>
             <P>
-              Help yourself complete your tasks by creating a list of chores and
-              letting Chorter help you get things done.
+              Curabitur suscipit odio ut porta vestibulum. Nam vitae est in
+              libero commodo scelerisque at non augue.
             </P>
           </div>
+        </Section>
+
+        <Section isOpposite>
+          <div>
+            <H1>Lorem ipsum dolor</H1>
+            <P>
+              Curabitur suscipit odio ut porta vestibulum. Nam vitae est in
+              libero commodo scelerisque at non augue.
+            </P>
+          </div>
+          <Image
+            src="/brand/logo/unknown-small.svg"
+            alt="Chorter Small Logo"
+            width={115}
+            height={94}
+          />
         </Section>
       </StyledMain>
     </>
