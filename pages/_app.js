@@ -1,9 +1,7 @@
 import "../styles/globals.css";
-import "../node_modules/modern-normalize/modern-normalize.css";
+import { Space_Grotesk } from "@next/font/google";
 
 import Layout from "../app/Layout";
-
-import { Space_Grotesk } from "@next/font/google";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
