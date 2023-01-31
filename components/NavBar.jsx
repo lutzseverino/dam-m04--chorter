@@ -3,7 +3,9 @@ import styled from "styled-components";
 
 import Button from "./actions/Button";
 
-const StyledNav = styled.nav`
+import A from "./typography/Link";
+
+const StyledNavBar = styled.nav`
   position: sticky;
   display: flex;
 
@@ -15,26 +17,33 @@ const StyledNav = styled.nav`
 
   padding: 32px 96px;
 
-  background-color: var(--background);
+  background-color: var(--foreground);
 
-  div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-
-    & > * {
-      display: flex;
-      gap: 1rem;
-    }
+  @media (max-width: 768px) {
+    padding: 16px 48px;
   }
 `;
 
-const NavBar = ({ continued }) => {
+const NavBarLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+`;
+
+const NavBarPages = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+`;
+
+const NavBar = () => {
   return (
-    <StyledNav continued={continued}>
-      <a href="/">
+    <StyledNavBar>
+      <A href="/">
         <Image
           src="/brand/logo/light-full.svg"
           alt="Chorter Full Logo"
@@ -42,20 +51,21 @@ const NavBar = ({ continued }) => {
           height={24}
           priority
         />
-      </a>
-      <div>
-        <div>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-        </div>
-        <div>
+      </A>
+      <NavBarLinks>
+        <NavBarPages>
+          <A href="/">Home</A>
+          <A href="/about">About</A>
+        </NavBarPages>
+
+        <NavBarPages>
           <Button variant="stroke" href="/login">
             Log in
           </Button>
           <Button href="/signup">Sign up</Button>
-        </div>
-      </div>
-    </StyledNav>
+        </NavBarPages>
+      </NavBarLinks>
+    </StyledNavBar>
   );
 };
 

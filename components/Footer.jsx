@@ -1,36 +1,46 @@
 import styled from "styled-components";
 
-import { H2, H3 } from "./typography/Headings";
+import { H1, H3 } from "./typography/Headings";
 import UL from "./typography/UnorderedList";
 import A from "./typography/Link";
 
 const StyledFooter = styled.footer`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  width: 100%;
   padding: 32px 96px;
 
-  grid-template-rows: 1fr 1fr;
+  background-color: var(--foreground-opposite);
+  color: var(--background);
 
-  background-color: #2b2d42;
-  color: white;
+  @media (max-width: 768px) {
+    padding: 16px 48px;
+  }
 `;
 
-const FooterNav = styled.div`
-  display: grid;
+const FooterLinks = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 100%;
 `;
 
-function Footer() {
+const Footer = () => {
   return (
     <StyledFooter>
-      <H2>Chores made shorter</H2>
-      <FooterNav>
+      <H1>Chores made shorter</H1>
+      <FooterLinks>
         <div>
           <H3>Legal</H3>
           <UL>
             <li>
-              <A href="/legal/privacy">Privacy</A>
+              <A href="/legal/terms">Terms of Service</A>
+            </li>
+            <li>
+              <A href="/legal/privacy">Privacy Policy</A>
             </li>
           </UL>
         </div>
@@ -40,20 +50,14 @@ function Footer() {
             <li>
               <A href="/about">About</A>
             </li>
-          </UL>
-        </div>
-        <div>
-          <H3>Lorem</H3>
-          <UL>
             <li>
-              <A>Ipsum</A>
-              <A>Dolor</A>
+              <A href="/contact">Contact</A>
             </li>
           </UL>
         </div>
-      </FooterNav>
+      </FooterLinks>
     </StyledFooter>
   );
-}
+};
 
 export default Footer;
