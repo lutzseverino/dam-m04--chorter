@@ -8,12 +8,12 @@ const StyledInput = styled.input`
   justify-content: space-between;
   align-items: center;
 
-  background-color: var(--background);
+  background-color: var(--foreground);
 
   border-radius: 6px;
   border: none;
 
-  box-shadow: inset 0px 0px 0px 1px var(--background-tone);
+  box-shadow: inset 0px 0px 0px 1px var(--foreground-border);
 
   ${({ size }) => getSize(size)}
 
@@ -23,8 +23,7 @@ const StyledInput = styled.input`
 
   &:disabled {
     cursor: not-allowed;
-    background-color: var(--background-tone);
-    box-shadow: inset 0px 0px 0px 1px var(--background-secondary-tone);
+    opacity: 0.5;
   }
 `;
 

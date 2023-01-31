@@ -3,10 +3,12 @@ import styled, { css } from "styled-components";
 
 const StyledBackdrop = styled.div`
   position: fixed;
+
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+
   background: rgba(0, 0, 0, 0.5);
 `;
 
@@ -20,12 +22,14 @@ const StyledDialog = styled.div`
       transform: translate(-50%, -50%);
     `}
 
+  padding: 16px 32px;
+
   max-width: 64ch;
 
-  background: white;
-  padding: 16px 32px;
+  background: var(--background);
+
   border-radius: 6px;
-  border: 1px solid #cccccc;
+  border: 1px solid var(--background-border);
 `;
 
 const Dialog = ({ onClose, children, floating }) => {

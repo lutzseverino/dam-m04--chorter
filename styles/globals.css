@@ -5,13 +5,27 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --foreground: #000;
-  --background: #edf2f4;
-  --background-tone: #cdd8dc;
-  --background-secondary-tone: #b7c3c8;
-
+  /*  
+  * Tones taken from https://colordesigner.io/
+  * Generate 8 tones, use first 2.
+  *
+  * Use the second tone for borders.
+  */
   --primary: #ef233c;
-  --secondary: #CFDCE2;
+
+  --background: white;
+  --background-opposite: black;
+
+  --foreground: #edf2f4;
+  --foreground-tone1: #dce5e8;
+  --foreground-tone2: #cdd8dc;
+
+  --foreground-opposite: #2b2d42;
+  --foreground-opposite-tone1: #34364b;
+  --foreground-opposite-tone2: #3d3f54;
+
+  --background-border: #dfdfdf;
+  --foreground-border: #cdd8dc;
 }
 
 * {
@@ -27,11 +41,10 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--background-opposite);
   background: var(--background);
 }
 
 a {
   color: inherit;
-  text-decoration: none;
 }

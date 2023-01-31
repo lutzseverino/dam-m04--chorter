@@ -10,8 +10,7 @@ const StyledSection = styled.section`
   background-size: cover;
 
   background-color: ${({ isOpposite }) =>
-    isOpposite ? "#8d99ae" : "var(--background)"};
-  color: ${({ isOpposite }) => (isOpposite ? "white" : "black")};
+    isOpposite ? "var(--foreground-tone1)" : "var(--foreground)"};
 `;
 
 /**
@@ -32,6 +31,7 @@ const StyledSectionContent = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    padding: 48px 16px;
   }
 `;
 

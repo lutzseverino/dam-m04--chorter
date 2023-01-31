@@ -1,20 +1,21 @@
 import styled, { css } from "styled-components";
 import getSize from "./sizeUtils";
 
+import A from "../typography/Link";
+
 const getVariant = (variant) =>
   ({
     primary: css`
       background-color: var(--primary);
-      color: #fff;
+      color: var(--background);
     `,
     stroke: css`
-      background-color: transparent;
-      box-shadow: inset 0px 0px 0px 2px var(--primary);
       color: var(--primary);
+      box-shadow: inset 0px 0px 0px 2px var(--primary);
     `,
     secondary: css`
-      background-color: var(--secondary);
-      color: #000;
+      background-color: var(--foreground);
+      color: var(--background-opposite);
     `,
   }[variant]);
 
@@ -28,8 +29,6 @@ const StyledActionable = css`
   border: none;
 
   opacity: 1;
-  background-color: var(--primary);
-  color: #fff;
 
   font-weight: bold;
 
@@ -60,7 +59,7 @@ const StyledButton = styled.button`
   ${StyledActionable}
 `;
 
-const StyledA = styled.a`
+const StyledA = styled(A)`
   ${StyledActionable}
 `;
 
