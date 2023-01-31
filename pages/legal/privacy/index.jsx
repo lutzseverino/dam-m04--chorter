@@ -11,8 +11,8 @@ import {
   H5,
   H6,
 } from "../../../components/typography/Headings";
-import Paragraph from "../../../components/typography/Paragraph";
-import UnorderedList from "../../../components/typography/UnorderedList";
+import P from "../../../components/typography/Paragraph";
+import UL from "../../../components/typography/UnorderedList";
 
 export default function Privacy() {
   return (
@@ -27,8 +27,8 @@ export default function Privacy() {
             h4: H4,
             h5: H5,
             h6: H6,
-            p: Paragraph,
-            ul: UnorderedList,
+            p: P,
+            ul: UL,
           }}
         />
       </div>
